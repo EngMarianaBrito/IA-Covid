@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../font/Montserrat/Montserrat-Regular.ttf');
+}
+
+@mixin font($size: initial, $color: #fff, $type: regular, $int: 400){
+    color: $color;
+    font: {
+        size: $size;
+        weight: $int;
+        @if $type == 'regular' {
+            family: 'Montserrat-Regular';
+        }
+    }
+}
+
+@mixin img($url, $size: cover, $pos: center, $repeat: no-repeat) {
+    background-image: url(#{$url});
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $repeat;
+}

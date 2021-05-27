@@ -1,0 +1,389 @@
+@import "includes/reset";
+@import "includes/queries";
+@import "includes/mixins";
+@import "includes/standard_project";
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  background-color: $blue;
+}
+
+.btn {
+  color: $blue;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Montserrat-Regular', serif;
+}
+
+.header {
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+
+  @include device(sm){
+    padding: 10px;
+  }
+
+  @include device(xs){
+    padding: 10px;
+  }
+}
+
+.logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  p {
+    color: $blue;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 5px;
+  }
+}
+
+.nav-top {
+  width: 16%;
+
+  @include device(sm){
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  @include device(xs){
+    width: 60%;
+    justify-content: space-between;
+  }
+}
+
+.list-nav-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    @include device(sm){
+      flex: 1;
+      text-align: center;
+    }
+
+    @include device(xs){
+      flex: 1;
+      text-align: center;
+    }
+
+    a {
+      color: $blue;
+      font-weight: 500;
+    }
+  }
+}
+
+.presentation {
+  padding: 10px 40px;
+  width: 85%;
+  margin: 0 auto;
+  height: calc(100vh - 80px);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include device(sm){
+    width: 95%;
+  }
+
+  @include device(xs){
+    width: 95%;
+  }
+
+  .logo-content {
+
+    img {
+      @include device(sm){
+        height: 38px;
+      }
+
+      @include device(xs){
+        height: 38px;
+      }
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 48px;
+
+      @include device(sm){
+        font-size: 38px;
+      }
+
+      @include device(xs){
+        font-size: 38px;
+      }
+    }
+
+    @include device(sm){
+      height: 40px;
+    }
+
+    @include device(xs){
+      height: 40px;
+    }
+  }
+
+  h1 {
+    max-width: 24ch;
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.2;
+
+    @include device(sm){
+      font-size: 38px;
+    }
+
+    @include device(xs){
+      font-size: 38px;
+    }
+  }
+
+  .btn-presentation {
+    margin-top: 40px;
+    padding: 14px 40px;
+  }
+}
+
+.info-about-salve {
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+
+  @include device(md){
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include device(sm){
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  @include device(xs){
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .info-img {
+    height: 360px;
+
+    @include device(md){
+      max-width: 60%;
+      height: auto;
+    }
+
+    @include device(sm){
+      max-width: 95%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    @include device(xs){
+      max-width: 95%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+
+  .info-content {
+    width: 40%;
+
+    @include device(md){
+      width: 60%;
+      margin-top: 50px;
+    }
+
+    @include device(sm){
+      width: 95%;
+      margin: 50px 0;
+    }
+
+    @include device(xs){
+      width: 95%;
+      margin: 50px 0;
+    }
+
+    h2 {
+      color: $blue;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    p {
+      color: $blue;
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+.screening {
+  height: 110vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include device(md){
+    height: 80vh;
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 30px 0;
+
+    @include device(md){
+      margin: 50px 0;
+    }
+  }
+}
+
+.screening-actions {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+
+  @include device(md){
+    width: 70%;
+  }
+
+  @include device(sm){
+    width: 95%;
+  }
+
+  @include device(xs){
+    width: 95%;
+  }
+
+  h3 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+
+    @include device(sm){
+      font-size: 22px;
+      text-align: center;
+    }
+
+    @include device(xs){
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+
+  .form-screening {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .question-to-patient {
+    display: inline;
+    margin: 20px 0;
+    padding: 12px 18px;
+    color: #ffffff;
+    font-size: 18px;
+    border: 1px solid #ffffff;
+
+    @include device(sm){
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+
+    @include device(xs){
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  }
+
+  .question-container {
+    width: 45%;
+    margin-top: 10px;
+
+    label {
+      color: #ffffff;
+      margin-left: 10px;
+    }
+  }
+
+  .btn-next-question {
+    margin-top: 60px;
+    cursor: pointer;
+    padding: 10px 22px;
+
+    @include device(sm){
+      margin-top: 40px;
+    }
+
+    @include device(xs){
+      margin-top: 40px;
+    }
+  }
+}
+
+.footer {
+  height: 250px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+
+  @include device(sm){
+    padding: 10px;
+  }
+
+  @include device(xs){
+    padding: 10px;
+  }
+
+  .copyright-text {
+    text-align: center;
+  }
+
+  .logo-footer {
+    justify-content: normal;
+  }
+}
+

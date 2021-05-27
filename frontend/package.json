@@ -1,0 +1,25 @@
+{
+  "name": "IA-Covid",
+  "version": "1.0.0",
+  "description": "Projeto Hackathon - Algoritmo preditor de mortes por COVID",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reglabel/IA-Covid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reglabel/IA-Covid/issues"
+  },
+  "homepage": "https://github.com/reglabel/IA-Covid#readme"
+}

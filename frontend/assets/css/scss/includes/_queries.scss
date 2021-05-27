@@ -1,0 +1,51 @@
+//variaveis do grid
+$xs: 35.5em;
+$lg: 64em;
+$md: 48em;
+$sm: 35.5em;
+$xl: 75em;
+
+//mixins de midia queries
+@mixin device($size, $orientation: null) {
+    @if $size == lg and $orientation == null {
+        @media screen and (min-width: #{$lg}) {
+            @content;
+        }
+    } @else if $size == lg and $orientation == landscape {
+        @media screen and (min-width: #{$lg}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == md and $orientation == null {
+        @media screen and (min-width: #{$md}) and (max-width: #{$lg - 0.0625em}) {
+            @content;
+        }
+    } @else if $size == md and $orientation == landscape {
+        @media screen and (min-width: #{$md}) and (max-width: #{$lg - 0.0625em}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == sm and $orientation == null {
+        @media screen and (min-width: #{$sm}) and (max-width: #{$md - 0.0625em}) {
+            @content;
+        }
+    } @else if $size == sm and $orientation == landscape {
+        @media screen and (min-width: #{$sm}) and (max-width: #{$md - 0.0625em}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == xs and $orientation == null {
+        @media screen and (max-width: #{$sm - 0.0625em}) {
+            @content;
+        }
+    } @else if $size == xs and $orientation == landscape {
+        @media screen and (max-width: #{$sm - 0.0625em}) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $size == xl and $orientation == null {
+        @media screen and (min-width: #{$xl}) {
+            @content;
+        }
+    } @else if $size == xl and $orientation == landscape {
+        @media screen and (min-width: #{$xl}) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
